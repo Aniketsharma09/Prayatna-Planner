@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="name">
+        <img src="./bg2.png" alt="" />
+        <h1>Prayatna Planner</h1>
+        <i class="ri-menu-3-line menu"></i>
+      </div>
+      <div class="changeButttons">
+        <button class="change-theme">change theme</button>
+        <button class="city">change city</button>
+      </div>
+    </nav>
+    <div class="changeCityPage">
+      <form action="" class="changeCityForm">
+        <label class="citylable" for="cityName">City Name</label>
+        <input type="text" class="cityName" placeholder="Enter City Name" />
+        <button class="citySubmit">subbmit</button>
+        <i class="ri-close-large-fill close-city-display"></i>
+      </form>
+    </div>
+    <div id="main">
+      <div class="all-details-cart">
+        <div class="weather-time">
+          <div class="time">
+            <h2 class="currDate"></h2>
+            <h1 class="currTime"></h1>
+            <h3 class="currentCity"></h3>
+          </div>
+          <div class="weather">
+            <h2>☀️</h2>
+            <h1 class="temp"></h1>
+            <h3 class="condition"></h3>
+          </div>
+        </div>
+        <div class="home-task half-cart">
+          <h2>📋</h2>
+          <h1 class="showCompeletedTask">8 tasks</h1>
+          <h3>completed</h3>
+        </div>
+        <div class="home-hour half-cart">
+          <h2>🧠</h2>
+          <h1>Productive</h1>
+          <h3 class="showProdHrs"></h3>
+        </div>
+      </div>
+      <div class="features">
+        <section id="0" class="todo elem">
+          <img src="./To do.png" alt="" />
+          <h2>To Do List</h2>
+        </section>
+        <section id="1" class="Daily elem">
+          <img src="./Daily Planner.png" alt="" />
+          <h2>Daily Planner</h2>
+        </section>
+        <section id="2" class="moti elem">
+          <img src="./Motivation.png" alt="" />
+          <h2>Motivation</h2>
+        </section>
+        <section id="3" class="pomo elem">
+          <img src="./Pomodoro Timer.png" alt="" />
+          <h2>Pomodoro Timer</h2>
+        </section>
+        <section id="4" class="goal elem">
+          <img src="./Daily Goals.png" alt="" />
+          <h2>Daily Goals</h2>
+        </section>
+      </div>
+      <section id="0" class="fullElem to-do-full-page">
+        <button id="0" class="close">close</button>
+        <h1>To Do List</h1>
+        <div class="allTasks">
+          <div class="current-task">
+            <h2>Remaning Tasks</h2>
+            <div class="remainingTasks">
+              <!-- <div class="task">
+                        <h3>mandir jio <span class="">imp</span></h3>
+                        <input type="checkbox">
+                    </div> -->
+            </div>
+          </div>
+          <div class="completed-task">
+            <h2>Completed Tasks</h2>
+            <div class="comleted">
+              <!-- <div class="com-task">
+                        <span class="">mandir jio</span>
+                        <i class="ri-check-fill"></i>
+                        <i class="ri-delete-bin-line del"></i>
+                    </div> -->
+            </div>
+          </div>
+          <div class="blur-bg"></div>
+          <div class="create-task">
+            <form action="" class="task-form">
+              <label class="task-name" for="task">Task Name</label>
+              <input class="taskName" placeholder="Enter Task" type="text" />
+              <textarea
+                class="discription"
+                placeholder="Enter Discription"
+                name="discription"
+                id=""
+              ></textarea>
+              <label class="dis-name" for="discription">discription</label>
+              <div class="imp">
+                <label class="imp-name" for="mark">Mark as important</label>
+                <input class="mark" type="checkbox" />
+              </div>
+              <div class="buttons">
+                <div class="close-task">Close</div>
+                <button class="create">add task</button>
+              </div>
+            </form>
+          </div>
+          <div class="create-task-btn">
+            <i class="ri-add-line"></i>
+          </div>
+        </div>
+      </section>
+      <section id="1" class="fullElem daily-planner-full-page">
+        <button id="1" class="close">close</button>
+        <h1>Plan Your Day</h1>
+        <div class="planner">
+          <!-- <div class="hour">
+                <h3>06:00 - 07:00</h3>
+                <input id="" class="hourInput" type="text" placeholder="...">
+              </div> -->
+        </div>
+      </section>
+      <section id="2" class="fullElem motivation-full-page">
+        <button id="2" class="close">close</button>
+        <h1>motivational quote</h1>
+        <div class="quote-bg">
+          <div class="blur-bg"></div>
+        </div>
+        <div class="quote-container">
+          <img class="left" src="./left.png" alt="" />
+          <h2 class="quote"></h2>
+          <h3 class="author"></h3>
+          <img class="right" src="./right.png" alt="" />
+        </div>
+      </section>
+      <section id="3" class="fullElem pomodoro-timer-full-page">
+        <button id="3" class="close">close</button>
+        <h1>Pomodoro Timer</h1>
+        <div class="pomodro-timer-container">
+          <div class="pomodoro-timer">
+            <div class="info">
+              <h2 class="session">Work Session</h2>
+            </div>
+            <div class="timer">
+              <h4 class="decrement-time">-</h4>
+              <h3 class="hourText">00</h3>
+              <span> : </span>
+              <h3 class="minute">25</h3>
+              <span> : </span>
+              <h3 class="second">00</h3>
+              <h4 class="increment-time">+</h4>
+            </div>
+            <div class="buttons">
+              <button class="start">Start</button>
+              <button class="pause">Pause</button>
+              <button class="reset">Reset</button>
+            </div>
+            <div class="details">
+              <h3>info</h3>
+            </div>
+            <div class="display-details">
+              <div class="productive">
+                <h1>⌚</h1>
+                <h2>today productive hours</h2>
+              </div>
+              <h2 class="productive-hours"></h2>
+              <i class="ri-close-large-fill close-hour-display"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="4" class="fullElem goal-full-page">
+        <button id="4" class="close">close</button>
+        <h1>Daily Goals</h1>
+        <div class="allGoals">
+          <div class="today-goal">
+            <h2>today goals</h2>
+            <div class="todayGoal">
+              <!-- <div class="task">
+                        <h3>mandir jio <span class="">imp</span></h3>
+                        <input type="checkbox">
+                    </div> -->
+            </div>
+          </div>
+          <div class="achieved-goal">
+            <h2>achieved goals</h2>
+            <div class="achieved">
+              <!-- <div class="com-task">
+                        <span class="">mandir jio</span>
+                        <i class="ri-check-fill"></i>
+                        <i class="ri-delete-bin-line del"></i>
+                    </div> -->
+            </div>
+          </div>
+          <div class="goal-blur-bg"></div>
+          <div class="add-goal">
+            <form action="" class="goal-form">
+              <label class="goal-name" for="goalName">Goal Name</label>
+              <input class="goalName" placeholder="Enter Task" type="text" />
+              <textarea
+                class="goal-discription"
+                placeholder="Enter Discription"
+                name="discription"
+                id=""
+              ></textarea>
+              <label class="dis-goal-name" for="goal-discription"
+                >discription</label
+              >
+              <div class="imp-goal">
+                <label class="imp-goal-name" for="goal-mark"
+                  >Mark as important</label
+                >
+                <input class="goal-mark" type="checkbox" />
+              </div>
+              <div class="buttons">
+                <div class="close-goal">Close</div>
+                <button class="create-goal">add goal</button>
+              </div>
+            </form>
+          </div>
+          <div class="create-goal-btn">
+            <i class="ri-add-line"></i>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

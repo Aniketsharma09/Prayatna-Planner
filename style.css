@@ -1,0 +1,1266 @@
+:root {
+  --per: black;
+  --sec: #222831;
+  --teri1: #00adb5;
+  --teri2: #eeeeee;
+}
+@font-face {
+  font-family: aeonik;
+  src: url(./AeonikTRIAL-Bold.otf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: aeonik;
+  src: url(./AeonikTRIAL-Regular.otf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: aeonik;
+  src: url(./AeonikTRIAL-Light.otf);
+  font-weight: 200;
+}
+* {
+  font-family: aeonik;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--teri2);
+  transition: all ease 0.3s;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-image: url(./bg.jpg);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-size: cover;
+  overflow: hidden;
+}
+body nav {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(68, 65, 65, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2rem 2rem;
+}
+body nav .name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 35%;
+}
+body nav .name img {
+  height: 5rem;
+}
+body nav .name h1 {
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-size: 2rem;
+  color: var(--teri2);
+}
+body nav .name i {
+  display: none;
+}
+body nav button {
+  margin-left: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  border-radius: 0.5rem;
+  background-color: var(--teri1);
+  padding: 0.5rem 1rem;
+  color: var(--teri2);
+}
+body nav button:active {
+  scale: 0.96;
+  transition: all ease 0.2s;
+}
+body .changeCityPage {
+  display: none;
+  border-radius: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.425);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  position: absolute;
+  height: 40vh;
+  width: 40vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .changeCityPage .changeCityForm {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .changeCityPage .changeCityForm .citylable {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+body .changeCityPage .changeCityForm .cityName {
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  height: 40px;
+  color: var(--per);
+}
+body .changeCityPage .changeCityForm .citySubmit {
+  padding: 0.6rem 1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  color: var(--teri2);
+  background-color: var(--teri1);
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+body .changeCityPage .changeCityForm .citySubmit:active {
+  scale: 0.94;
+}
+body .changeCityPage .changeCityForm .close-city-display {
+  position: absolute;
+  right: 3%;
+  top: 5%;
+}
+body .changeCityPage .changeCityForm .close-city-display:active {
+  scale: 0.9;
+}
+body #main {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+body #main .all-details-cart {
+  margin-top: 1rem;
+  height: 32vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+body #main .all-details-cart .weather-time {
+  height: 100%;
+  padding: 1rem 1.5rem;
+  width: 59.2%;
+  background-color: rgba(65, 62, 62, 0.1843137255);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body #main .all-details-cart .weather-time .time h2 {
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+body #main .all-details-cart .weather-time .time h1 {
+  margin-top: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 2.8rem;
+}
+body #main .all-details-cart .weather-time .time h3 {
+  margin: 0.7rem 0.4rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+body #main .all-details-cart .weather-time .weather {
+  height: 100%;
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #main .all-details-cart .weather-time .weather h2 {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+body #main .all-details-cart .weather-time .weather h1 {
+  margin-top: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+body #main .all-details-cart .weather-time .weather h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+body #main .all-details-cart .half-cart {
+  background-color: rgba(65, 62, 62, 0.1843137255);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 18.7%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+body #main .all-details-cart .half-cart h2 {
+  font-size: 2.5rem;
+}
+body #main .all-details-cart .half-cart h1 {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+body #main .all-details-cart .half-cart h3 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+body #main .features {
+  display: flex;
+  gap: 20px;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+body #main .features .elem:active {
+  scale: 0.94;
+}
+body #main .features .elem {
+  flex-shrink: 10;
+  background-color: var(--sec);
+  height: 30vh;
+  width: 219px;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+body #main .features .elem h2 {
+  position: absolute;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  bottom: 5%;
+  right: 5%;
+}
+body #main .features .elem img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+body #main .fullElem {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0%;
+  display: none;
+  padding: 2rem;
+}
+body #main .fullElem h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+body #main .fullElem button {
+  cursor: pointer;
+  position: absolute;
+  top: 4%;
+  right: 5%;
+  padding: 0.7rem 1rem;
+  background-color: var(--teri1);
+  color: var(--teri2);
+  border: none;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  border-radius: 0.5rem;
+}
+body #main .fullElem button:active {
+  scale: 0.94;
+}
+body #main .to-do-full-page {
+  overflow: hidden;
+}
+body #main .to-do-full-page .allTasks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 89%;
+  width: 100%;
+  margin-top: 2rem;
+  position: relative;
+}
+body #main .to-do-full-page .allTasks .current-task {
+  height: 100%;
+  overflow-y: auto;
+  border-radius: 1rem;
+  background-color: var(--sec);
+  width: 60%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body #main .to-do-full-page .allTasks .current-task .remainingTasks {
+  width: 100%;
+}
+body #main .to-do-full-page .allTasks .current-task .remainingTasks .task {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--teri2);
+}
+body #main .to-do-full-page .allTasks .current-task .remainingTasks .task h3 {
+  text-transform: capitalize;
+  color: var(--per);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body #main .to-do-full-page .allTasks .current-task .remainingTasks .taskh3span {
+  margin: 0rem 0 0.3rem 2rem;
+  font-size: 0.5rem;
+  background-color: red;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
+body#main .to-do-full-page .allTasks .current-task .remainingTasks .taskh3span .ture {
+  display: block;
+}
+body #main .to-do-full-page .allTasks .current-task .remainingTasks .task h3 span .false {
+  display: none;
+}
+body #main .to-do-full-page .allTasks .current-task .remainingTasks .task input {
+  scale: 1.5;
+}
+body #main .to-do-full-page .allTasks .current-task h2 {
+  text-transform: capitalize;
+  align-self: center;
+  font-size: 1.3rem;
+  color: var(--teri2);
+}
+body #main .to-do-full-page .allTasks .completed-task {
+  height: 100%;
+  width: 38%;
+  overflow-y: auto;
+  border-radius: 1rem;
+  background-color: var(--sec);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body #main .to-do-full-page .allTasks .completed-task h2 {
+  text-transform: capitalize;
+  align-self: center;
+  font-size: 1.3rem;
+  color: var(--teri2);
+}
+body #main .to-do-full-page .allTasks .completed-task .comleted {
+  width: 100%;
+}
+body #main .to-do-full-page .allTasks .completed-task .comleted .com-task {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 0.7rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--teri1);
+}
+body #main .to-do-full-page .allTasks .completed-task .comleted .com-task span {
+  width: 70%;
+  text-decoration: line-through;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-left: 0.5rem;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  color: var(--teri2);
+}
+body #main.to-do-full-page .allTasks .completed-task.comleted.com-taskinput {
+  scale: 1.5;
+}
+body #main .to-do-full-page .allTasks .completed-task .comleted .com-task i {
+  font-size: 1.5rem;
+  color: var(--teri2);
+}
+body #main .to-do-full-page .allTasks .completed-task .comleted .com-task .task-del {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: red;
+}
+body #main .to-do-full-page .allTasks .completed-task .comleted .com-task .task-del:active {
+  scale: 0.9;
+}
+body #main .to-do-full-page .allTasks .create-task {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: black;
+  height: 90%;
+  width: 60%;
+  border-radius: 1rem;
+  padding: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body #main .to-do-full-page .allTasks .create-task form {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+body #main .to-do-full-page .allTasks .create-task form .task-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+body #main .to-do-full-page .allTasks .create-task form .taskName {
+  font-size: 1.2rem;
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  color: var(--per);
+  padding: 1rem;
+}
+body #main .to-do-full-page .allTasks .create-task form .dis-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+body #main .to-do-full-page .allTasks .create-task form .discription {
+  font-size: 1.2rem;
+  height: 25vh;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  color: var(--per);
+  padding: 1rem;
+}
+body #main .to-do-full-page .allTasks .create-task form .imp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+}
+body #main .to-do-full-page .allTasks .create-task form .imp .imp-name {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+body #main .to-do-full-page .allTasks .create-task form .imp .mark {
+  scale: 1.5;
+}
+body #main .to-do-full-page .allTasks .create-task form .buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body #main .to-do-full-page .allTasks .create-task form .buttons .create {
+  position: initial;
+  font-size: 1.5rem;
+  width: 49%;
+  padding: 0.5rem 0;
+}
+body #main .to-do-full-page .allTasks .create-task form .buttons .close-task {
+  background-color: var(--teri1);
+  text-align: center;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  width: 49%;
+  padding: 0.5rem 0;
+}
+body #main .to-do-full-page .allTasks .create-task form .buttons .close-task:active {
+  scale: 0.94;
+}
+body #main .to-do-full-page .allTasks .create-task-btn {
+  z-index: 1;
+  position: absolute;
+  padding: 0.8rem;
+  background-color: var(--teri1);
+  bottom: 5%;
+  right: 3%;
+  border-radius: 50%;
+}
+body #main .to-do-full-page .allTasks .create-task-btn i {
+  pointer-events: none;
+  font-size: 2.5rem;
+}
+body #main .to-do-full-page .allTasks .create-task-btn:active {
+  scale: 0.94;
+}
+body #main .to-do-full-page .allTasks .blur-bg {
+  display: none;
+  top: -20%;
+  left: -5%;
+  background-color: rgba(31, 23, 23, 0.767);
+  position: absolute;
+  height: 130%;
+  width: 110%;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+body #main .daily-planner-full-page {
+  overflow: hidden;
+}
+body #main .daily-planner-full-page h1 {
+  font-size: 2rem;
+}
+body #main .daily-planner-full-page .planner {
+  margin-top: 1rem;
+  height: 95%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+body #main .daily-planner-full-page .planner .hour {
+  position: relative;
+  display: flex;
+  width: 49%;
+}
+body #main .daily-planner-full-page .planner .hour h3 {
+  z-index: 1;
+  background-color: transparent;
+  color: var(--teri1);
+  left: 2%;
+  top: 5%;
+  font-size: 0.8rem;
+  position: absolute;
+}
+body #main .daily-planner-full-page .planner .hour input {
+  margin-bottom: 0.5rem;
+  background-color: var(--sec);
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 1.3rem 0 0.8rem 2rem;
+  font-size: 1.5rem;
+}
+body #main .motivation-full-page {
+  overflow: hidden;
+}
+body #main .motivation-full-page h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+body #main .motivation-full-page .quote-bg {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #main .motivation-full-page .quote-bg .blur-bg {
+  height: 60%;
+  width: 70%;
+  background-color: var(--teri1);
+  filter: blur(150px);
+}
+body #main .motivation-full-page .quote-container {
+  border-radius: 1rem;
+  position: absolute;
+  background-color: rgba(238, 238, 238, 0.1725490196);
+  max-height: 70vh;
+  width: 70vw;
+  padding: 3rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body #main .motivation-full-page .quote-container img {
+  position: absolute;
+}
+body #main .motivation-full-page .quote-container .left {
+  top: 5%;
+  left: 4%;
+}
+body #main .motivation-full-page .quote-container .right {
+  bottom: 5%;
+  right: 4%;
+}
+body #main .motivation-full-page .quote-container h2 {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}
+body #main .motivation-full-page .quote-container h3 {
+  text-align: center;
+  margin-top: 2rem;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container {
+  margin-top: 4rem;
+  height: 90%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer {
+  height: 40%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .info {
+  top: 25%;
+  position: absolute;
+  padding: 1rem 1.5rem;
+  background-color: var(--sec);
+  border-radius: 1rem;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .info h2 {
+  color: var(--teri1);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .timer h4 {
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .timer h4:active {
+  scale: 0.9;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .timer h3 {
+  background-color: var(--sec);
+  font-size: 4rem;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .timer span {
+  padding: 1rem;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+  width: 100%;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .buttons button {
+  position: initial;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .details {
+  cursor: pointer;
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: 5%;
+  padding: 0.8rem 1rem;
+  background-color: var(--sec);
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .details h3 {
+  pointer-events: none;
+  color: var(--teri1);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  transition: all ease-in-out 0.2s;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .details:active {
+   scale: 0.95;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .display-details {
+  width: 60vw;
+  min-height: 50vh;
+  position: relative;
+  background-color: rgba(238, 238, 238, 0.2745098039);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  top: -130%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  display: none;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .display-details .productive {
+  gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .display-details .productive h1 {
+  font-size: 3rem;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .display-details .productive h2 {
+  margin-bottom: 0.7rem;
+  text-transform: capitalize;
+  font-size: 2.2rem;
+  color: var(--per);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .display-details h2 {
+  margin-top: 1rem;
+  font-size: 3rem;
+  color: var(--per);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer  .display-details .close-hour-display {
+  font-size: 1rem;
+  position: absolute;
+  top: 3%;
+  right: 2%;
+}
+body  #main  .pomodoro-timer-full-page  .pomodro-timer-container  .pomodoro-timer  .display-details  .close-hour-display:active {
+  scale: 0.9;
+}
+body #main .goal-full-page .allGoals {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 89%;
+  width: 100%;
+  margin-top: 2rem;
+  position: relative;
+}
+body #main .goal-full-page .allGoals .today-goal {
+  height: 100%;
+  overflow-y: auto;
+  border-radius: 1rem;
+  background-color: var(--sec);
+  width: 60%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body #main .goal-full-page .allGoals .today-goal .todayGoal {
+  width: 100%;
+}
+body #main .goal-full-page .allGoals .today-goal .todayGoal .task {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--teri2);
+}
+body #main .goal-full-page .allGoals .today-goal .todayGoal .task h3 {
+  text-transform: capitalize;
+  color: var(--per);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body #main .goal-full-page .allGoals .today-goal .todayGoal .task h3 span {
+  margin: 0rem 0 0.3rem 2rem;
+  font-size: 0.5rem;
+  background-color: red;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
+body #main .goal-full-page .allGoals .today-goal .todayGoal .task h3 span.ture {
+  display: block;
+}
+body  #main  .goal-full-page  .allGoals  .today-goal  .todayGoal  .task  h3  span.false {
+  display: none;
+}
+body #main .goal-full-page .allGoals .today-goal .todayGoal .task input {
+  scale: 1.5;
+}
+body #main .goal-full-page .allGoals .today-goal h2 {
+  text-transform: capitalize;
+  align-self: center;
+  font-size: 1.3rem;
+  color: var(--teri2);
+}
+body #main .goal-full-page .allGoals .achieved-goal {
+  height: 100%;
+  width: 38%;
+  overflow-y: auto;
+  border-radius: 1rem;
+  background-color: var(--sec);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body #main .goal-full-page .allGoals .achieved-goal h2 {
+  text-transform: capitalize;
+  align-self: center;
+  font-size: 1.3rem;
+  color: var(--teri2);
+}
+body #main .goal-full-page .allGoals .achieved-goal .achieved {
+  width: 100%;
+}
+body #main .goal-full-page .allGoals .achieved-goal .achieved .com-task {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 0.7rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--teri1);
+}
+body #main .goal-full-page .allGoals .achieved-goal .achieved .com-task span {
+  width: 70%;
+  text-decoration: line-through;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-left: 0.5rem;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  color: var(--teri2);
+}
+body #main .goal-full-page .allGoals .achieved-goal .achieved .com-task input {
+  scale: 1.5;
+}
+body #main .goal-full-page .allGoals .achieved-goal .achieved .com-task i {
+  font-size: 1.5rem;
+  color: var(--teri2);
+}
+body #main .goal-full-page .allGoals .achieved-goal .achieved .com-task i.del {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: red;
+}
+body  #main  .goal-full-page  .allGoals  .achieved-goal  .achieved  .com-task  i.del:active {
+  scale: 0.9;
+}
+body #main .goal-full-page .allGoals .add-goal {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: black;
+  height: 90%;
+  width: 60%;
+  border-radius: 1rem;
+  padding: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body #main .goal-full-page .allGoals .add-goal form {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+body #main .goal-full-page .allGoals .add-goal form .goal-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+body #main .goal-full-page .allGoals .add-goal form .goalName {
+  font-size: 1.2rem;
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  color: var(--per);
+  padding: 1rem;
+}
+body #main .goal-full-page .allGoals .add-goal form .dis-goal-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+body #main .goal-full-page .allGoals .add-goal form .goal-discription {
+  font-size: 1.2rem;
+  height: 25vh;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  color: var(--per);
+  padding: 1rem;
+}
+body #main .goal-full-page .allGoals .add-goal form .imp-goal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+}
+body #main .goal-full-page .allGoals .add-goal form .imp-goal .imp-goal-name {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+body #main .goal-full-page .allGoals .add-goal form .imp-goal .goal-mark {
+  scale: 1.5;
+}
+body #main .goal-full-page .allGoals .add-goal form .buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body #main .goal-full-page .allGoals .add-goal form .buttons .create-goal {
+  position: initial;
+  font-size: 1.5rem;
+  width: 49%;
+  padding: 0.5rem 0;
+}
+body #main .goal-full-page .allGoals .add-goal form .buttons .close-goal {
+  background-color: var(--teri1);
+  text-align: center;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  width: 49%;
+  padding: 0.5rem 0;
+}
+body  #main  .goal-full-page  .allGoals  .add-goal  form  .buttons  .close-goal:active {
+    scale: 0.94;
+}
+body #main .goal-full-page .allGoals .create-goal-btn {
+  z-index: 1;
+  position: absolute;
+  padding: 0.8rem;
+  background-color: var(--teri1);
+  bottom: 5%;
+  right: 3%;
+  border-radius: 50%;
+}
+body #main .goal-full-page .allGoals .create-goal-btn i {
+  pointer-events: none;
+  font-size: 2.5rem;
+}
+body #main .goal-full-page .allGoals .create-goal-btn:active {
+  scale: 0.94;
+}
+body #main .goal-full-page .allGoals .goal-blur-bg {
+  display: none;
+  top: -20%;
+  left: -5%;
+  background-color: rgba(31, 23, 23, 0.767);
+  position: absolute;
+  height: 130%;
+  width: 110%;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+
+@media (max-width: 768px) {
+  body{
+    overflow-y: hidden;
+  }
+  body nav {
+    flex-direction: column;
+    /* background-color: rebeccapurple; */
+    padding: 0.5rem;
+    height: 8vh;
+  }
+  body nav .name {
+    width: 100%;
+    /* background-color:red; */
+  }
+  body nav .name img {
+    margin-right: 2rem;
+    height: 4rem;
+  }
+  body nav .name h1 {
+    font-size: 1.2rem;
+  }
+  body nav .name i{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    display: block;
+  }
+  body nav .name i:active{
+    scale: .9;
+  }
+ body nav .changeButttons{
+  display: none;
+ }
+  body nav button {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+  body #main .all-details-cart {
+    margin-top: 0rem;
+    height: auto;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  body #main .all-details-cart .weather-time {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* background-color: white; */
+  }
+  body #main .all-details-cart .weather-time .time {
+    width: 70%;
+    width: fit-content;
+  }
+  body #main .all-details-cart .weather-time .time h2 {
+    font-size: 1rem;
+  }
+  body #main .all-details-cart .weather-time .time h1 {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+  }
+  body #main .all-details-cart .weather-time .time h3 {
+    font-size: 0.9rem;
+  }
+  body #main .all-details-cart .weather-time .weather {
+    height: 100%;
+    width: 20%;
+    gap: 0.6rem;
+  }
+  body #main .all-details-cart .weather-time .weather h2 {
+    font-size: 1.5rem;
+    margin-top: 0rem;
+  }
+  body #main .all-details-cart .weather-time .weather h1 {
+    margin-top: 0rem;
+    font-size: 1.2rem;
+  }
+  body #main .all-details-cart .weather-time .weather h3 {
+    font-size: 0.7rem;
+  }
+  body #main .all-details-cart .half-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    padding: 0rem;
+    width: 47.5%;
+    height: 18vh;
+  }
+  body #main .all-details-cart .half-cart h2 {
+    font-size: 2.5rem;
+  }
+  body #main .all-details-cart .half-cart h1 {
+    font-size: 1.8rem;
+  }
+  body #main .all-details-cart .half-cart h3 {
+    font-size: 1rem;
+  }
+  body #main .features {
+    gap: 10px;
+    padding: 1rem;
+    margin-bottom: 3rem;
+  }
+  body #main .features .elem {
+    height: 15vh;
+    width: 31%;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+  }
+  body #main .features .elem h2 {
+  letter-spacing: 0px;
+  font-size: 1rem;
+}
+  body #main .fullElem {
+    height: 100%;
+    padding: 1.5rem;
+  }
+  body #main .fullElem button {
+    top: 2%;
+  }
+  body #main .to-do-full-page {
+    overflow: auto;
+  }
+  body #main .to-do-full-page .allTasks {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 1rem;
+  }
+  body #main .to-do-full-page .allTasks .current-task {
+    width: 100%;
+    padding: 1rem;
+  }
+  body #main .to-do-full-page .allTasks .completed-task {
+    width: 100%;
+    padding: 1rem;
+  }
+  body #main .to-do-full-page .allTasks .create-task {
+    top: 45%;
+    padding: 1rem;
+    height: 58%;
+    width: 100%;
+  }
+  body #main .to-do-full-page .allTasks .create-task form .discription {
+    height: 20vh;
+  }
+  body #main .to-do-full-page .allTasks .create-task-btn {
+  position: fixed;
+}
+body #main .daily-planner-full-page {
+  overflow: hidden;
+}
+body #main .daily-planner-full-page h1 {
+  font-size: 1.8rem;
+}
+body #main .daily-planner-full-page .planner {
+  width: 100%;
+}
+body #main .daily-planner-full-page .planner .hour {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+body #main .daily-planner-full-page .planner .hour h3 {
+  left: 4%;
+  top: 8%;
+}
+body #main .motivation-full-page h1 {
+  font-size: 1.5rem;
+}
+body #main .motivation-full-page .quote-bg .blur-bg {
+  height: 80%;
+}
+body #main .motivation-full-page .quote-container {
+  max-height: 80vh;
+  width: 90vw;
+  padding: 2rem;
+}
+body #main .motivation-full-page .quote-container .left {
+  top: 2%;
+  left: 2%;
+}
+body #main .motivation-full-page .quote-container h2 {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
+body #main .pomodoro-timer-full-page h1{
+  font-size: 1.7rem;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container {
+  margin-top: 2rem;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer {
+  height: 30%;
+  width: 100%;
+  display: flex;  
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .timer {
+  width: 100%;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .timer h4 {
+  padding: 1rem;
+  font-size: 2.5rem;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .timer h3 {
+  font-size: 2rem;
+  padding: 1rem;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .timer span {
+  padding: .5rem;
+  font-size: 3rem;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .buttons button {
+  font-size: 1rem;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .display-details {
+  width: 100%;
+  min-height: 50vh;
+ 
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .display-details .productive {
+  gap: 1rem;
+   flex-direction: column;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .display-details .productive h2 {
+  text-align: center;
+  font-size: 1.7rem;
+ 
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer .display-details h2 {
+  font-size: 2.5rem;
+}
+body #main .pomodoro-timer-full-page .pomodro-timer-container .pomodoro-timer  .display-details .close-hour-display {
+  right: 3.5%;
+}
+body #main .goal-full-page{
+  overflow-y: auto;
+}
+body #main .goal-full-page .allGoals {
+  height: 100%;
+    flex-direction: column;
+    gap: 1rem;
+}
+body #main .goal-full-page .allGoals .today-goal {
+  width: 100%;
+  padding: 1rem;
+}
+body #main .goal-full-page .allGoals .achieved-goal {
+  width: 100%;
+}
+body #main .goal-full-page .allGoals .add-goal {
+  height: 58%;
+  width: 100%;
+  padding: 1rem;
+  top: 45%;
+}
+body #main .goal-full-page .allGoals .add-goal form {
+  padding-top: 0rem;
+}
+body #main .goal-full-page .allGoals .add-goal form .goal-discription {
+  height: 19vh;
+}
+body #main .goal-full-page .allGoals .create-goal-btn { 
+  position: fixed;
+}  
+}
