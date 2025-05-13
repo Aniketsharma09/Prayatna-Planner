@@ -74,9 +74,13 @@ function homePage() {
     const date = now.getDate();
     currDate.innerHTML = `${date} ${monthName}, ${year}`;
     currTime.innerHTML = `${dayName}, ${time}`;
-    showCompeletedTask.innerHTML = `${
-      JSON.parse(localStorage.getItem("completeTasks")).length
-    } tasks`;
+    if (JSON.parse(localStorage.getItem("completeTasks"))) {
+      showCompeletedTask.innerHTML = `${
+        JSON.parse(localStorage.getItem("completeTasks")).length
+      } tasks`;
+    } else {
+      showCompeletedTask.innerHTML = `${0} tasks`;
+    }
     const disProduvtiveHours = Math.floor(totalProdSeconds / 3600);
     const disProductiveMinutes = Math.floor((totalProdSeconds % 3600) / 60);
     showProdHrs.innerHTML = `${disProduvtiveHours} hrs ${disProductiveMinutes} mins`;
