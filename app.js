@@ -373,6 +373,7 @@ function pomodoroTimer() {
   document.querySelector(".pause").addEventListener("click", stopInterval);
   document.querySelector(".reset").addEventListener("click", function () {
     totalSecond = 25 * 60;
+    stopInterval();
     updateUI();
   });
 
