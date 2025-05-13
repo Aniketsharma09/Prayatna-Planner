@@ -362,7 +362,7 @@ function pomodoroTimer() {
       intervalId = setInterval(function () {
         totalSecond -= 1;
         updateUI();
-      }, 10);
+      }, 1000);
     }
   }
   function stopInterval() {
