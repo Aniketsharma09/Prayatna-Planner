@@ -1,13 +1,13 @@
 let elems = document.querySelectorAll(".elem");
 let fullElems = document.querySelectorAll(".fullElem");
 let allCloseBtns = document.querySelectorAll(".close");
-
 // Preview full task
 elems.forEach(function (elem) {
   elem.addEventListener("click", function () {
     fullElems[elem.id].style.display = "block";
   });
 });
+// localStorage.clear()
 // Close task preview
 allCloseBtns.forEach(function (btn) {
   btn.addEventListener("click", function () {
@@ -78,7 +78,8 @@ function homePage() {
       showCompeletedTask.innerHTML = `${
         JSON.parse(localStorage.getItem("completeTasks")).length
       } tasks`;
-    } else {
+    }
+    else{
       showCompeletedTask.innerHTML = `${0} tasks`;
     }
     const disProduvtiveHours = Math.floor(totalProdSeconds / 3600);
@@ -364,11 +365,12 @@ function pomodoroTimer() {
     updateProductivehour();
     if (!intervalId) {
       intervalId = setInterval(function () {
-        totalSecond -= 1;
+        totalSecond --;
         updateUI();
-      }, 1000);
+      },10);
     }
   }
+  // localStorage.clear()
   function stopInterval() {
     clearInterval(intervalId);
     intervalId = null;
