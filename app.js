@@ -78,8 +78,7 @@ function homePage() {
       showCompeletedTask.innerHTML = `${
         JSON.parse(localStorage.getItem("completeTasks")).length
       } tasks`;
-    }
-    else{
+    } else {
       showCompeletedTask.innerHTML = `${0} tasks`;
     }
     const disProduvtiveHours = Math.floor(totalProdSeconds / 3600);
@@ -365,9 +364,9 @@ function pomodoroTimer() {
     updateProductivehour();
     if (!intervalId) {
       intervalId = setInterval(function () {
-        totalSecond --;
+        totalSecond--;
         updateUI();
-      },10);
+      }, 1000);
     }
   }
   // localStorage.clear()
